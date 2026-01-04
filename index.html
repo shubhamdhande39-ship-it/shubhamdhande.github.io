@@ -43,33 +43,58 @@
 <section class="section">
   <h2>Projects</h2>
 
-  <!-- AI VIDEOS -->
-  <div class="project-group">
-    <h3>AI Videos</h3>
-    <div class="grid">
-      <div class="card">Client – IFFCO</div>
-      <div class="card">Client – Agri Brand</div>
+  <!-- FOLDER -->
+  <div class="folder">
+    <div class="folder-header" onclick="toggleFolder(this)">
+      <span class="folder-icon">📁</span>
+      <span class="folder-title">AI Videos</span>
+    </div>
+
+    <div class="folder-content">
+      <div class="client">IFFCO – AI Campaign</div>
+      <div class="client">Agri Brand – AI Explainer</div>
     </div>
   </div>
 
-  <!-- VIDEO EDITING -->
-  <div class="project-group">
-    <h3>Video Editing</h3>
-    <div class="grid">
-      <div class="card">Client – Tata AIG</div>
-      <div class="card">Client – Real Estate</div>
+  <!-- FOLDER -->
+  <div class="folder">
+    <div class="folder-header" onclick="toggleFolder(this)">
+      <span class="folder-icon">📁</span>
+      <span class="folder-title">Video Editing</span>
+    </div>
+
+    <div class="folder-content">
+      <div class="client">Tata AIG – Corporate Film</div>
+      <div class="client">Real Estate – Promo Edit</div>
     </div>
   </div>
 
-  <!-- MOTION VIDEOS -->
-  <div class="project-group">
-    <h3>Motion Videos</h3>
-    <div class="grid">
-      <div class="card">Client – Brand Film</div>
-      <div class="card">Client – Social Media</div>
+  <!-- FOLDER -->
+  <div class="folder">
+    <div class="folder-header" onclick="toggleFolder(this)">
+      <span class="folder-icon">📁</span>
+      <span class="folder-title">Motion Videos</span>
+    </div>
+
+    <div class="folder-content">
+      <div class="client">Brand Film – Motion Design</div>
+      <div class="client">Social Media – Motion Reels</div>
     </div>
   </div>
+
 </section>
+
+<!-- SCRIPT -->
+<script>
+function toggleFolder(header) {
+  const content = header.nextElementSibling;
+  const icon = header.querySelector(".folder-icon");
+
+  content.classList.toggle("open");
+  icon.textContent = content.classList.contains("open") ? "📂" : "📁";
+}
+</script>
+
 
 <!-- CONTACT -->
 <section class="section contact">
