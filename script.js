@@ -12,23 +12,25 @@ function typeWriter() {
 }
 typeWriter();
 
-/* MAIN FOLDER TOGGLE */
-function toggleMain(folder) {
+/* FOLDER TOGGLE */
+function toggleFolder(folder, iconSymbol) {
+  const icon = folder.querySelector(".icon");
   folder.classList.toggle("open");
 
-  const icon = folder.querySelector(".icon");
-  const title = folder.querySelector(".title").innerText;
-
   if (folder.classList.contains("open")) {
-    if (title.includes("AI")) icon.textContent = "⚡";
-    if (title.includes("Video")) icon.textContent = "✂️";
-    if (title.includes("Motion")) icon.textContent = "📊";
+    icon.textContent = iconSymbol;
   } else {
     icon.textContent = "📁";
   }
 }
 
-/* SMOOTH SECTION SCROLL FEEL */
-document.querySelectorAll(".section").forEach(sec => {
-  sec.style.scrollMarginTop = "80px";
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
 });
