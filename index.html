@@ -16,21 +16,40 @@
 </head>
 <body>
 
+<body>
+
 <!-- HERO -->
 <section class="hero section">
-  <h1 id="typewriter"></h1>
-  <p>Motion Graphic Designer • Cinematic & AI Visuals</p>
+  <div class="hero-content">
+    <h1 id="typewriter"></h1>
+    <p class="hero-sub">
+      Motion Graphic Designer • Cinematic & AI Visuals
+    </p>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section about">
+<section class="section about reveal">
   <div class="about-header">
     <i class='bx bx-user'></i>
     <h2>About Me</h2>
   </div>
 
-  <p class="about-line">
-    I create cinematic motion graphics and AI-driven visuals focused on storytelling.
+  <p class="about-text">
+    I am a Motion Graphic Designer specializing in cinematic motion graphics,
+    AI-driven visuals, and high-impact video content. My work focuses on
+    transforming ideas into compelling visual stories that connect with
+    audiences emotionally and visually.
+    <br><br>
+    With a strong eye for design and motion, I create videos that balance
+    aesthetic appeal, clarity, and narrative flow. From brand films and
+    promotional videos to experimental AI visuals, I approach every project
+    with a storytelling mindset—ensuring that each frame serves a purpose.
+    <br><br>
+    I enjoy exploring new tools and workflows, especially AI-assisted
+    techniques, to push creative boundaries while maintaining clean,
+    professional execution. My goal is to deliver visuals that are not only
+    engaging but also aligned with the brand’s message and intent.
   </p>
 </section>
 
@@ -41,36 +60,36 @@
   <div class="folders">
 
     <!-- AI -->
-    <div class="folder main" onclick="toggleMain(this)">
+    <div class="folder" onclick="toggleFolder(this,'⚡')">
       <div class="folder-head">
         <span class="icon">📁</span>
         <span class="title">AI Videos</span>
       </div>
-      <div class="sub">
+      <div class="folder-body">
         <div class="client">IFFCO – AI Campaign</div>
         <div class="client">Agri Brand – AI Explainer</div>
       </div>
     </div>
 
-    <!-- EDIT -->
-    <div class="folder main" onclick="toggleMain(this)">
+    <!-- VIDEO EDIT -->
+    <div class="folder" onclick="toggleFolder(this,'✂️')">
       <div class="folder-head">
         <span class="icon">📁</span>
         <span class="title">Video Editing</span>
       </div>
-      <div class="sub">
+      <div class="folder-body">
         <div class="client">Tata AIG – Corporate Film</div>
         <div class="client">Real Estate – Promo Edit</div>
       </div>
     </div>
 
     <!-- MOTION -->
-    <div class="folder main" onclick="toggleMain(this)">
+    <div class="folder" onclick="toggleFolder(this,'📊')">
       <div class="folder-head">
         <span class="icon">📁</span>
         <span class="title">Motion Design</span>
       </div>
-      <div class="sub">
+      <div class="folder-body">
         <div class="client">Brand Film – Motion</div>
         <div class="client">Social Media – Motion Reels</div>
       </div>
@@ -80,7 +99,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section contact">
+<section class="section contact reveal">
   <h2>Contact</h2>
   <div class="contact-row">
     <div><i class='bx bx-envelope'></i> shubhamdhande39@gmail.com</div>
@@ -91,3 +110,4 @@
 
 <script src="script.js"></script>
 </body>
+
