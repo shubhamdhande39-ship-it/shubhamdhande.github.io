@@ -51,4 +51,153 @@ body {
     linear-gradient(135deg, #0b0b0b, #111);
 }
 
-.hero-content h1
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.hero-sub {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* =====================================
+   HEADINGS
+===================================== */
+.section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-header i {
+  font-size: 26px;
+  opacity: 0.85;
+}
+
+.about-text {
+  margin-top: 20px;
+  max-width: 900px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* =====================================
+   PROJECT FOLDERS
+===================================== */
+.folders {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.folder {
+  background: #141414;
+  padding: 22px;
+  border-radius: 16px;
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.folder:hover {
+  transform: translateY(-6px);
+}
+
+.folder-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.folder-head .icon {
+  font-size: 20px;
+}
+
+/* Sub-folder (HIDDEN BY DEFAULT) */
+.folder-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.folder.open .folder-body {
+  max-height: 180px;
+  margin-top: 14px;
+}
+
+/* Client items */
+.client {
+  background: #1c1c1c;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+.contact {
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-row div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.contact-row i {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 60px 7%;
+  }
+
+  .folders {
+    flex-direction: column;
+  }
+
+  .folder {
+    width: 100%;
+  }
+}
