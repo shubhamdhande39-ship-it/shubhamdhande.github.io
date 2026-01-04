@@ -148,3 +148,66 @@ body {
     padding: 60px 7%;
   }
 }
+
+/* ===============================
+   CLICKABLE FOLDERS
+================================ */
+.folder {
+  margin-bottom: 24px;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  background: #141414;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.folder-header:hover {
+  background: #1c1c1c;
+  transform: translateY(-3px);
+}
+
+.folder-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.folder-icon {
+  font-size: 20px;
+}
+
+/* Folder content animation */
+.folder-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+  padding-left: 20px;
+}
+
+.folder-content.open {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+/* Client items */
+.client {
+  background: #1a1a1a;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.client:hover {
+  transform: translateX(6px);
+}
+
