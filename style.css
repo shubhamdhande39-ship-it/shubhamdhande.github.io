@@ -1,5 +1,5 @@
 /* ===============================
-   FONT & RESET
+   RESET & BASE
 ================================ */
 * {
   margin: 0;
@@ -15,61 +15,28 @@ body {
 }
 
 /* ===============================
-   HERO – CREATIVE BACKGROUND
+   HERO
 ================================ */
 .hero {
   min-height: 100vh;
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  overflow: hidden;
   background:
-    radial-gradient(circle at 20% 20%, #1e1e1e, transparent 40%),
+    radial-gradient(circle at 20% 20%, #1f1f1f, transparent 40%),
     radial-gradient(circle at 80% 30%, #2a2a2a, transparent 45%),
     linear-gradient(135deg, #0b0b0b, #111);
 }
 
-/* Subtle motion-style glow */
-.hero::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
-  filter: blur(80px);
-  animation: floatGlow 12s infinite alternate ease-in-out;
-}
-
-@keyframes floatGlow {
-  from {
-    transform: translate(-120px, -80px);
-  }
-  to {
-    transform: translate(120px, 80px);
-  }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 20px;
-}
-
-/* ===============================
-   NAME & ROLE (POPPINS BOLD)
-================================ */
 .hero h1 {
-  font-size: 54px;
-  font-weight: 700; /* Poppins Bold */
-  letter-spacing: 1px;
+  font-size: 56px;
+  font-weight: 700;
 }
 
 .hero p {
   margin-top: 12px;
-  font-size: 18px;
-  font-weight: 600; /* Semi-bold */
+  font-weight: 600;
   opacity: 0.85;
 }
 
@@ -77,79 +44,95 @@ body {
    SECTIONS
 ================================ */
 .section {
-  padding: 80px 10%;
+  padding: 90px 10%;
 }
 
 .section h2 {
-  font-size: 30px;
-  font-weight: 700; /* Bold heading */
+  font-size: 32px;
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
-.section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #ffffff;
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
 /* ===============================
-   GRID / CARDS
+   ABOUT – CREATIVE
 ================================ */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
+.creative-bg {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.03),
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px,
+      transparent 14px
+    );
 }
 
-.card {
-  background: #141414;
-  padding: 32px 26px;
-  border-radius: 18px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+.about-header i {
+  font-size: 28px;
 }
 
-.card h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.card p {
-  font-size: 14px;
-  font-weight: 400;
-  opacity: 0.75;
-}
-
-/* ===============================
-   ABOUT
-================================ */
 .about p {
   max-width: 850px;
-  font-size: 16px;
-  font-weight: 400;
   opacity: 0.85;
 }
 
 /* ===============================
-   CONTACT
+   PROJECTS
+================================ */
+.project-group {
+  margin-bottom: 50px;
+}
+
+.project-group h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #141414;
+  padding: 28px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===============================
+   CONTACT (NO BOX / LINE)
 ================================ */
 .contact {
-  background: #111;
   text-align: center;
 }
 
-.contact p {
-  margin-top: 12px;
-  font-size: 15px;
-  font-weight: 400;
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  font-size: 20px;
   opacity: 0.8;
 }
 
@@ -157,13 +140,8 @@ body {
    MOBILE
 ================================ */
 @media (max-width: 768px) {
-
   .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero p {
-    font-size: 16px;
+    font-size: 38px;
   }
 
   .section {
