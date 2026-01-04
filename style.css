@@ -211,3 +211,101 @@ body {
   transform: translateX(6px);
 }
 
+/* TYPEWRITER */
+#typewriter {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+/* ABOUT ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-text {
+  font-size: 17.6px; /* +10% */
+  max-width: 700px;
+  margin-top: 16px;
+  opacity: 0.85;
+}
+
+/* FOLDERS HORIZONTAL */
+.folders {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.folder-box {
+  background: #141414;
+  padding: 20px;
+  border-radius: 16px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.folder-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.folder-box.open .folder-body {
+  max-height: 200px;
+  margin-top: 14px;
+}
+
+/* ICON ANIMATIONS */
+.folder-box.open .ai {
+  animation: pulse 0.6s ease;
+}
+.folder-box.open .edit {
+  animation: cut 0.6s ease;
+}
+.folder-box.open .motion {
+  animation: slide 0.6s ease;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.3);}
+  100% {transform: scale(1);}
+}
+@keyframes cut {
+  0% {transform: rotate(0);}
+  50% {transform: rotate(20deg);}
+  100% {transform: rotate(0);}
+}
+@keyframes slide {
+  0% {transform: translateX(-10px);}
+  100% {transform: translateX(0);}
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
