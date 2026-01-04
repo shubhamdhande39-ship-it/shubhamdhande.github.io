@@ -1,5 +1,5 @@
 /* =========================
-   TYPEWRITER EFFECT (NAME)
+   TYPEWRITER EFFECT
 ========================= */
 const text = "Shubham Dhande";
 let index = 0;
@@ -16,7 +16,7 @@ function typeWriter() {
 typeWriter();
 
 /* =========================
-   FOLDER TOGGLE (MAIN → SUB)
+   FOLDER OPEN / CLOSE
 ========================= */
 function toggleFolder(folder, openIcon) {
   const icon = folder.querySelector(".icon");
@@ -30,7 +30,7 @@ function toggleFolder(folder, openIcon) {
 }
 
 /* =========================
-   SCROLL REVEAL UI MOTION
+   SCROLL REVEAL MOTION
 ========================= */
 const reveals = document.querySelectorAll(".reveal");
 
