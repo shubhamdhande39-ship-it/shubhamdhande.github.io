@@ -1,0 +1,144 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* =========================
+   SECTION COMMON
+========================= */
+.section {
+  padding: 70px 10%;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  border-left: 4px solid #ffffff;
+  padding-left: 12px;
+}
+
+/* =========================
+   VIDEO EMBED
+========================= */
+.video iframe {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px 20px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: #222;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about p {
+  max-width: 800px;
+  opacity: 0.85;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+  background: #111;
+  text-align: center;
+}
+
+.contact p {
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 7%;
+  }
+
+  .video iframe {
+    height: 220px;
+  }
+}
