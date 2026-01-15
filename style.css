@@ -46,7 +46,7 @@ body {
   opacity: 0.85;
 }
 
-/* SCROLL MOTION */
+/* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -122,7 +122,7 @@ body {
   font-size: 14px;
 }
 
-/* CLIENT LOGOS */
+/* LOGOS */
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
