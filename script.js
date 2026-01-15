@@ -1,4 +1,3 @@
-/* TYPEWRITER */
 const text = "Shubham Dhande";
 let i = 0;
 const target = document.getElementById("typewriter");
@@ -12,14 +11,12 @@ function typeWriter() {
 }
 typeWriter();
 
-/* FOLDER TOGGLE */
 function toggleFolder(folder, iconOpen) {
   const icon = folder.querySelector(".icon");
   folder.classList.toggle("open");
   icon.textContent = folder.classList.contains("open") ? iconOpen : "📁";
 }
 
-/* SCROLL REVEAL */
 const reveals = document.querySelectorAll(".reveal");
 window.addEventListener("scroll", () => {
   reveals.forEach(el => {
