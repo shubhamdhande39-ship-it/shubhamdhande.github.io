@@ -1,44 +1,30 @@
-/* =========================
-   TYPEWRITER EFFECT
-========================= */
+/* TYPEWRITER */
 const text = "Shubham Dhande";
-let index = 0;
-const speed = 90;
+let i = 0;
 const target = document.getElementById("typewriter");
 
 function typeWriter() {
-  if (index < text.length) {
-    target.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
+  if (i < text.length) {
+    target.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 90);
   }
 }
 typeWriter();
 
-/* =========================
-   FOLDER OPEN / CLOSE
-========================= */
-function toggleFolder(folder, openIcon) {
+/* FOLDER TOGGLE */
+function toggleFolder(folder, iconOpen) {
   const icon = folder.querySelector(".icon");
   folder.classList.toggle("open");
-
-  if (folder.classList.contains("open")) {
-    icon.textContent = openIcon;
-  } else {
-    icon.textContent = "📁";
-  }
+  icon.textContent = folder.classList.contains("open") ? iconOpen : "📁";
 }
 
-/* =========================
-   SCROLL REVEAL MOTION
-========================= */
+/* SCROLL REVEAL */
 const reveals = document.querySelectorAll(".reveal");
-
 window.addEventListener("scroll", () => {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 120) {
-      section.classList.add("active");
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 120) {
+      el.classList.add("active");
     }
   });
 });
