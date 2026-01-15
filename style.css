@@ -1,44 +1,28 @@
-/* =====================================
-   RESET & BASE
-===================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0b0b0b;
+  background: #0b0b0b;
   color: #f5f5f5;
   line-height: 1.7;
 }
 
-/* =====================================
-   SECTIONS (SCROLL UI MOTION)
-===================================== */
+/* SECTIONS */
 .section {
   padding: 90px 10%;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+.center-title {
+  text-align: center;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =====================================
-   HERO / NAME
-===================================== */
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -51,62 +35,57 @@ body {
     linear-gradient(135deg, #0b0b0b, #111);
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 56px;
   font-weight: 700;
 }
 
 .hero-sub {
   margin-top: 12px;
-  font-size: 18px;
   font-weight: 600;
   opacity: 0.85;
 }
 
-/* =====================================
-   HEADINGS
-===================================== */
-.section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
+/* SCROLL MOTION */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* =====================================
-   ABOUT SECTION
-===================================== */
+/* ABOUT */
+.about {
+  text-align: center;
+}
 .about-header {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 12px;
 }
-
-.about-header i {
-  font-size: 26px;
-  opacity: 0.85;
-}
-
 .about-text {
-  margin-top: 20px;
+  margin: 20px auto 0;
   max-width: 900px;
   font-size: 16px;
-  opacity: 0.9;
 }
 
-/* =====================================
-   PROJECT FOLDERS
-===================================== */
+/* FOLDERS */
 .folders {
   display: flex;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .folder {
+  width: 300px;
   background: #141414;
   padding: 22px;
   border-radius: 16px;
-  width: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -123,11 +102,6 @@ body {
   font-weight: 600;
 }
 
-.folder-head .icon {
-  font-size: 20px;
-}
-
-/* Sub-folder (HIDDEN BY DEFAULT) */
 .folder-body {
   max-height: 0;
   overflow: hidden;
@@ -135,23 +109,46 @@ body {
 }
 
 .folder.open .folder-body {
-  max-height: 180px;
+  max-height: 500px;
   margin-top: 14px;
 }
 
-/* Client items */
+/* CLIENTS */
 .client {
   background: #1c1c1c;
-  padding: 12px 16px;
-  border-radius: 12px;
+  padding: 12px;
+  border-radius: 10px;
   margin-bottom: 8px;
   font-size: 14px;
-  opacity: 0.85;
 }
 
-/* =====================================
-   CONTACT
-===================================== */
+/* CLIENT LOGOS */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 24px;
+}
+
+.client-logo {
+  background: #1c1c1c;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.client-logo:hover {
+  transform: translateY(-6px);
+}
+
+.client-logo img {
+  max-width: 80px;
+  max-height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* CONTACT */
 .contact {
   text-align: center;
 }
@@ -162,42 +159,4 @@ body {
   gap: 30px;
   margin-top: 20px;
   flex-wrap: wrap;
-}
-
-.contact-row div {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-}
-
-.contact-row i {
-  font-size: 18px;
-  opacity: 0.8;
-}
-
-/* =====================================
-   MOBILE RESPONSIVE
-===================================== */
-@media (max-width: 768px) {
-
-  .hero-content h1 {
-    font-size: 38px;
-  }
-
-  .hero-sub {
-    font-size: 16px;
-  }
-
-  .section {
-    padding: 60px 7%;
-  }
-
-  .folders {
-    flex-direction: column;
-  }
-
-  .folder {
-    width: 100%;
-  }
 }
